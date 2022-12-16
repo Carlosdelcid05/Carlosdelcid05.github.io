@@ -1,0 +1,202 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #102020;
+}
+
+.contenedor_juego{ 
+    background-color: #102020;
+    padding: 2em;
+    box-shadow: 0 .2vw .3vw 0 #000, 0 .25vw .35vw 0 #000;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 5%;
+    color: #115555;
+    font-weight: bolder;
+
+}
+
+.titulo{ 
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+#titulo{
+    font-size: 8vh;
+    color: #115555;
+    user-select: none;
+    
+}
+
+.ganado{ 
+    white-space: nowrap;
+    border-right: #115555 solid .5rem;
+    width: 8ch;
+
+    animation: escribiendo 2s steps(8), parpadeo .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes escribiendo {
+    from {width: 0;}
+}
+
+@keyframes parpadeo {
+    50% { border-color: transparent;}
+}
+
+.tiempo{
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.tiempo > div {
+    background-color: #115555;
+    display: flex;
+    color: #102020;
+    border-radius: 1vw;
+    box-shadow: 0 .1vw .15vw 0 #000a, 0 .125vw .175vw 0 #000a;
+    user-select: none;
+    justify-content: center;
+}
+
+#tiempo{
+    display: block;
+}
+
+.p1{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.p1 > b{
+    position: relative;
+    bottom: 1vw;
+    user-select: none;
+}
+
+#p1 {
+        position: relative;
+        bottom: 1vw;
+        user-select: none;
+}
+
+.p2{
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.p2 > b{
+    position: relative;
+    bottom: 1vw;
+    user-select: none;
+}
+
+#p2{
+    position: relative;
+    bottom: 1vw;
+    user-select: none;
+}
+
+.turno{
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+#turno{
+    display: inline;
+    position: relative;
+    bottom: 1vw;
+    user-select: none;
+    right: 1.5vw;
+}
+
+.totito{
+    grid-area: 3 / 2 / 4 / 5;
+}
+
+.contenedor_totito{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 50%;
+    margin-left: 7vw;
+}
+
+.contenedor_totito > button {
+    width: 10vw;
+    height: 10vw;
+    background-color: transparent;
+    border: none;
+    font-size: 10vw;
+    color: #115555;
+}
+
+.contenedor_totito > button > span {
+    position: relative;
+    bottom: 1rem;
+    display: block;
+    height: .5rem;
+    height: auto;
+}
+
+.contenedor_totito > button:hover {
+    width: 10vw;
+    height: 10vw;
+    background-color: #115555;
+    border: none;
+    transition: background-color .25s;
+    color: #102020;
+}
+
+
+
+#b_0{
+    border-right: #115555 solid .5vh;
+    border-bottom: #115555 solid .5vh;
+}
+
+#b_1{
+    border-left: #115555 solid .5vh;
+    border-right: #115555 solid .5vh;
+    border-bottom: #115555 solid .5vh;
+}
+
+#b_2{
+    border-left: #115555 solid .5vh;
+    border-bottom: #115555 solid .5vh;
+}
+
+#b_3{
+    border-top: #115555 solid .5vh;
+    border-right: #115555 solid .5vh;
+    border-bottom: #115555 solid .5vh;
+}
+
+#b_4{
+    border-left: #115555 solid .5vh;
+    border-right: #115555 solid .5vh;
+    border-bottom: #115555 solid .5vh;
+    border-top: #115555 solid .5vh;
+}
+
+#b_5{
+    border-left: #115555 solid .5vh;
+    border-bottom: #115555 solid .5vh;
+    border-top: #115555 solid .5vh;
+}
+
+#b_6 {
+    border-right: #115555 solid .5vh;
+    border-top: #115555 solid .5vh;
+}
+
+#b_7{
+    border-left: #115555 solid .5vh;
+    border-right: #115555 solid .5vh;
+    border-top: #115555 solid .5vh;
+}
+
+#b_8{
+    border-left: #115555 solid .5vh;
+    border-top: #115555 solid .5vh;
+}
+
+
+

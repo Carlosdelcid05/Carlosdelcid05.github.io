@@ -1,38 +1,3 @@
-/* div #totito { 
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-items: center;
-    align-items: center; 
-}
-.cuerpo { 
-    background: grey;
-    text-align: center;
-    border: black 5px solid;
-    width: 100px;
-    height: 100px;
-    font-size: 40px;
-    font-family: sans-serif;
-
-}
-
-
-
-.rncr { 
-height: 20px;
-width: 20px;
-} */
-
-
-/*
-.nav_list {
-display: inline-block;
-list-style: none;
-
-}
-*/
-
 body {
     background: #fff0f0;
     margin: 0px;
@@ -208,13 +173,10 @@ main > p {
    background-color: #ffefef;
    display: grid;
    grid-template-columns: 250px 1fr;
+   border-radius: 25px;
+   box-shadow: 0 .2vw .3vw 0 #2b000888, 0 .25vw .35vw 0 #2b000888; ;
    
  }
-
- .contenedor_curriculum::selection{ 
-  background-color: #2b0008;
-  color: #ffefef;
-}
 
  .curriculum-item{
    padding: 10px 2px;
@@ -275,6 +237,7 @@ main > p {
    background-color: #880527;
    color: #fff;
    padding-bottom: 500px;
+   border-bottom-left-radius: 25px;
  }
 
  .contacto_curriculum > h3{
@@ -304,7 +267,7 @@ main > p {
    text-align: center;
    color: #fff;
    background-color: #880527;
-   border-top-left-radius: 12%;
+   border-top-left-radius: 25px;
  }
 
  .foto_curriculum > h2 {
@@ -314,7 +277,7 @@ main > p {
 
 .graf {
 position: relative;
-width: 190px;
+width: 220px;
 border: 3px solid transparent;
 padding: 0;
 border-radius: 12px;
@@ -343,4 +306,35 @@ border-radius: 10px;
    padding: 2px 0;
 }
 
+.contenedor-proyectos{ 
+  display: flex;
+  justify-content: center;
+}
+
+
+.proyecto {
+border: 4px solid;
+background-color: #ffeeee;
+width: 20em;
+margin: 10px 40px;
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+box-shadow: 0 .2vw .3vw 0 #2b000888, 0 .25vw .35vw 0 #2b000888;
+}
+
+.proyecto > a{
+  user-select: none;
+}
+
+.proyecto > a > img{
+  width: 19em;
+  margin: .5em;
+  object-fit: cover;
+  box-shadow: 0 .2vw .3vw 0 #2b000888, 0 .25vw .35vw 0 #2b000888;
+  user-select: none;
+}
+
+.proyecto > p {
+  margin: 1em;
+}
 
