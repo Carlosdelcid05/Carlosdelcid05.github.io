@@ -2,75 +2,238 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" main="IE=edge">
-    <meta name="viewport" main="width=device-width, initial-scale=1.0">
-    <link href="estilo.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme">
-    <title>Portafolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Ingeniero en Sistemas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .skill-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <h1>Tu Nombre</h1>
+        <p>Ingeniero en Sistemas</p>
+    </header>
 
-<div class="contenedor">
-    
-        <nav class=" header grid-item">
-            <h1 class="title">Carlos del Cid | Desarrollador Web</h1>
-            <img class="firma"  alt="firma" src="img/icono.png">
-            <ul class="nav_list">
-                <li class="nav__list-item"><a href="index.html" class="nav_inicio">Inicio</a>        </li>
-                <li class="nav__list-item"><a href="Curriculum.html" class="nav_acerca">Acerca de mí</a>  </li>
-                <li class="nav__list-item"><a href="#" class="nav_contactar">Contactame</a> </li>
-                <li class="nav__list-item"><a href="#" class="nav_proyectos">Otros</a>      </li>
-            </ul>
-        </nav> 
+    <!-- Navegación -->
+    <nav>
+        <a href="#about">Acerca de</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
 
-    <main class="main grid-item">
-       <section>
-        <h2>Proyectos</h2>
-        <div class="contenedor-proyectos">
-                <div class="proyecto">
-                    <a href="totito.html"><img src="img/totito.png" alt="totito"></a>
-                    <h3>Totito</h3>
-                    <p>En particular totito fue uno de los primeros proyectos que me enseñaron a programar en el colegio, así que decidí rehacerlo pero con una gran cantidad de mejoras.</p>
-                </div>
-                <div class="proyecto">
-                    <a href="pagina.html">Pagina web</a>
-                    <button >Pagina</button>
-                    <h3>Pagina</h3>
-                    <p></p>
-                </div>
-                <div class="proyecto">
-                    <img src="" alt="">
-                    <h3></h3>
-                    <p></p>
-                </div>
-
+    <!-- Sección Acerca de -->
+    <section id="about">
+        <h2>Acerca de mí</h2>
+        <div class="about-content">
+            <p>
+                Soy un Ingeniero en Sistemas apasionado por la tecnología y la innovación. 
+                Tengo experiencia en desarrollo de software, bases de datos y sistemas de información. 
+                Me dedico a crear soluciones eficientes y escalables para resolver problemas complejos.
+            </p>
         </div>
-       </section>
-    </main>
-    
-    <footer class="footer grid-item">
-        <ul class="footer_list list_menu">
-            <li class="footer_list-item"><b class="nav_titulo">Menú</b></li>
-            <li class="footer_list-item"><a href="index.html" class="nav_inicio">Inicio</a>       </li>
-            <li class="footer_list-item"><a href="Curriculum.html" class="nav_acerca">Acerca de mí</a> </li>
-            <li class="footer_list-item"><a href="#" class="nav_contactar">Contactame</a></li>
-            <li class="footer_list-item"><a href="#" class="nav_proyectos">Otros</a>     </li>
-        </ul>
-        <ul class="footer_list list_proyectos">
-            <li class="footer_list-item"><b class="nav_titulo">Proyectos</b></li>
-            <li class="footer_list-item"><a href="totito.html" class="nav_proyecto1">Totito</a></li>
-            <li class="footer_list-item"><a href="#" class="nav_proyecto2">#####</a></li>
-            <li class="footer_list-item"><a href="#" class="nav_proyecto3">#####</a></li>
-            <li class="footer_list-item"><a href="#" class="nav_proyecto4">#####</a></li>
-        </ul>
+    </section>
 
-        <p class="info"> Esa página fue realizada por: <b>CARLOS DEL CID</b></p>
+    <!-- Sección Habilidades -->
+    <section id="skills">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills">
+            <div class="skill-card">
+                <h3>Lenguajes de Programación</h3>
+                <p>Python, Java, C++, JavaScript, SQL</p>
+            </div>
+            <div class="skill-card">
+                <h3>Desarrollo Web</h3>
+                <p>HTML, CSS, JavaScript, React, Node.js</p>
+            </div>
+            <div class="skill-card">
+                <h3>Bases de Datos</h3>
+                <p>MySQL, PostgreSQL, MongoDB</p>
+            </div>
+            <div class="skill-card">
+                <h3>Herramientas</h3>
+                <p>Git, Docker, Linux, AWS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Sistema de Gestión de Inventario</h3>
+                <p>
+                    Aplicación web desarrollada con Python y Flask para gestionar 
+                    inventario de una empresa. Incluye autenticación de usuarios y reportes.
+                </p>
+                <p><strong>Tecnologías:</strong> Python, Flask, MySQL, HTML/CSS</p>
+            </div>
+            <div class="project-card">
+                <h3>Chat en Tiempo Real</h3>
+                <p>
+                    Aplicación de chat colaborativo creada con Node.js y WebSockets. 
+                    Permite múltiples usuarios conectados simultáneamente.
+                </p>
+                <p><strong>Tecnologías:</strong> Node.js, Socket.io, React, MongoDB</p>
+            </div>
+            <div class="project-card">
+                <h3>Análisis de Datos</h3>
+                <p>
+                    Herramienta de análisis de datos con visualizaciones interactivas. 
+                    Procesa grandes volúmenes de información de forma eficiente.
+                </p>
+                <p><strong>Tecnologías:</strong> Python, Pandas, Matplotlib, JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <p>📧 <strong>Email:</strong> <a href="mailto:tu@email.com">tu@email.com</a></p>
+            <p>📱 <strong>Teléfono:</strong> +56 9 1234 5678</p>
+            <p>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tunombre" target="_blank">linkedin.com/in/tunombre</a></p>
+            <p>🐙 <strong>GitHub:</strong> <a href="https://github.com/tunombre" target="_blank">github.com/tunombre</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Tu Nombre. Todos los derechos reservados.</p>
     </footer>
-
-
-</div>
-
-
-<script src="codigo.js"></script>
 </body>
 </html>
