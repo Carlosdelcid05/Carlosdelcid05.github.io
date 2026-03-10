@@ -50,6 +50,19 @@ header h1 {
     letter-spacing: 0.04em;
 }
 
+.easter-egg-link {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-left: 0.35rem;
+}
+
+.easter-egg-link img {
+    width: 1.35em;
+    height: 1.35em;
+    object-fit: contain;
+    display: block;
+}
+
 header p {
     font-size: 1.05rem;
     color: var(--color-muted);
