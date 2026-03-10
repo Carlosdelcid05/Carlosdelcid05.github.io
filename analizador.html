@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Código - Frontend</title>
+    <link rel="stylesheet" href="analizador.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Analizador de Código - Frontend</h1>
+            <nav class="menu">
+                
+                <button id="theme-toggle" class="theme-toggle" type="button">Dark</button>
+            </nav>
+        </header>
+
+        <main>
+            <div id="panel-ejecutar" class="panel active">
+                <div class="code-container">
+                    <div class="input-section">
+                        <label for="entrada-codigo">Código de Entrada:</label>
+                        <textarea id="entrada-codigo" placeholder="Escribe tu código aquí..."></textarea>
+                        <button id="btn-enviar" class="execute-btn" type="button">Ejecutar análisis</button>
+                    </div>
+
+                    <div class="output-section">
+                        <label for="salida-resultado">Resultado:</label>
+                        <textarea id="salida-resultado" readonly placeholder="La salida del backend aparecerá aquí..."></textarea>
+                    </div>
+                </div>
+
+                <div class="analysis-tables">
+                    <div class="table-container">
+                        <h4>Tabla de Errores</h4>
+                        <details class="table-accordion" open>
+                            <summary>Tabla de Errores</summary>
+                            <div id="tabla-errores" class="table-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Tipo</th>
+                                            <th>Descripción</th>
+                                            <th>Línea</th>
+                                            <th>Columna</th>
+                                            <th>Detalles</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="errores-body"></tbody>
+                                </table>
+                                <div class="no-data" id="no-errores">No se encontraron errores</div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="table-container">
+                        <h4>Tabla de Símbolos</h4>
+                        <details class="table-accordion" open>
+                            <summary>Tabla de Símbolos</summary>
+                            <div id="tabla-simbolos" class="table-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nombre</th>
+                                            <th>Tipo</th>
+                                            <th>Valor</th>
+                                            <th>Ámbito</th>
+                                            <th>Entorno</th>
+                                            <th>Línea</th>
+                                            <th>Columna</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="simbolos-body"></tbody>
+                                </table>
+                                <div class="no-data" id="no-simbolos">No se encontraron símbolos</div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <div class="output-section">
+                        <label for="salida-ast">Visualización AST (DOT):</label>
+                        <textarea id="salida-ast" readonly placeholder="La visualización AST aparecerá aquí..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Analizador ejecutándose con compilador local</p>
+        </footer>
+    </div>
+
+    <script>
+        window.Jison = window.Jison || {
+            print: (...args) => console.log(...args)
+        };
+    </script>
+    <script src="compiler/parser.js"></script>
+    <script src="compiler/semantica.js"></script>
+    <script src="compiler/ast.js"></script>
+    <script src="analizador.js"></script>
+</body>
+</html>
