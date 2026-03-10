@@ -1,57 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Ingeniero en Sistemas</title>
+    <title>My Portfolio - Systems and Computer Science Engineer</title>
     <!-- CSS Externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Tu Nombre</h1>
-        <p>Ingeniero en Sistemas</p>
+        <h1 id="profile-name">Carlos del Cid</h1>
+        <p id="profile-role">Systems and Computer Science Engineer</p>
     </header>
 
     <!-- Navegación -->
     <nav>
-        <a href="#about">Acerca de</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
+        <a id="nav-about" href="#about">About</a>
+        <a id="nav-skills" href="#skills">Skills</a>
+        <a id="nav-projects" href="#projects">Projects</a>
+        <a id="nav-contact" href="#contact">Contact</a>
+        <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch language to Spanish">ES</button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
     </nav>
 
     <!-- Sección Acerca de -->
     <section id="about">
-        <h2>Acerca de mí</h2>
+        <h2 id="about-title">About Me</h2>
         <div class="about-content">
-            <p>
-                Soy un Ingeniero en Sistemas apasionado por la tecnología y la innovación. 
-                Tengo experiencia en desarrollo de software, bases de datos y sistemas de información. 
-                Me dedico a crear soluciones eficientes y escalables para resolver problemas complejos.
+            <p id="about-text">
+                I am a Systems and Computer Science Engineer passionate about technology and innovation.
+                I have experience in software development, databases, and information systems.
+                I am dedicated to creating efficient and scalable solutions to solve complex problems.
             </p>
         </div>
     </section>
 
     <!-- Sección Habilidades -->
     <section id="skills">
-        <h2>Habilidades Técnicas</h2>
+        <h2 id="skills-title">Technical Skills</h2>
         <div class="skills">
             <div class="skill-card">
-                <h3>Lenguajes de Programación</h3>
-                <p>Python, Java, C++, JavaScript, SQL</p>
+                <h3 id="skill-programming">Programming Languages</h3>
+                <p>Java, C#, Fortran, Python, Dart, JavaScript, Go, Bash, SQL</p>
             </div>
             <div class="skill-card">
-                <h3>Desarrollo Web</h3>
-                <p>HTML, CSS, JavaScript, React, Node.js</p>
+                <h3 id="skill-web">App Development</h3>
+                <p>HTML, CSS, JavaScript, Node.js, Flutter</p>
             </div>
             <div class="skill-card">
-                <h3>Bases de Datos</h3>
-                <p>MySQL, PostgreSQL, MongoDB</p>
+                <h3 id="skill-db">Databases</h3>
+                <p>MySQL, PostgreSQL, Oracle</p>
             </div>
             <div class="skill-card">
-                <h3>Herramientas</h3>
+                <h3 id="skill-tools">Tools</h3>
                 <p>Git, Docker, Linux, AWS</p>
             </div>
         </div>
@@ -59,49 +61,52 @@
 
     <!-- Sección Proyectos -->
     <section id="projects">
-        <h2>Proyectos</h2>
+        <h2 id="projects-title">Projects</h2>
         <div class="projects">
+            <a href="https://samnu.netlify.app/" target="_blank" class="project-card-link">
             <div class="project-card">
-                <h3>Sistema de Gestión de Inventario</h3>
-                <p>
-                    Aplicación web desarrollada con Python y Flask para gestionar 
-                    inventario de una empresa. Incluye autenticación de usuarios y reportes.
+                <h3 id="project-1-title">Mathematical Academic Software</h3>
+                <p id="project-1-desc">
+                Multiplatform program developed in Flutter for the academic resolution of numerical calculations through sophisticated mathematical algorithms in a didactic way.
                 </p>
-                <p><strong>Tecnologías:</strong> Python, Flask, MySQL, HTML/CSS</p>
+                <p><strong id="project-tech-label-1">Technologies:</strong> Flutter, Dart</p>
             </div>
+            </a>
+            <a href="#" class="project-card-link">
             <div class="project-card">
-                <h3>Chat en Tiempo Real</h3>
-                <p>
-                    Aplicación de chat colaborativo creada con Node.js y WebSockets. 
-                    Permite múltiples usuarios conectados simultáneamente.
+                <h3 id="project-2-title">Clothing Inventory and Sales System</h3>
+                <p id="project-2-desc">
+                    Coming soon
                 </p>
-                <p><strong>Tecnologías:</strong> Node.js, Socket.io, React, MongoDB</p>
+                <p><strong id="project-tech-label-2">Technologies:</strong> Flutter, PostgreSQL</p>
             </div>
+            </a>
+            <a href="#" class="project-card-link">
             <div class="project-card">
-                <h3>Análisis de Datos</h3>
-                <p>
-                    Herramienta de análisis de datos con visualizaciones interactivas. 
-                    Procesa grandes volúmenes de información de forma eficiente.
+                <h3 id="project-3-title">-</h3>
+                <p id="project-3-desc">
+                    Coming soon
                 </p>
-                <p><strong>Tecnologías:</strong> Python, Pandas, Matplotlib, JavaScript</p>
+                <p><strong id="project-tech-label-3">Technologies:</strong>Coming soon</p>
             </div>
+            </a>
         </div>
     </section>
 
     <!-- Sección Contacto -->
     <section id="contact">
-        <h2>Contacto</h2>
+        <h2 id="contact-title">Contact</h2>
         <div class="contact-info">
-            <p>📧 <strong>Email:</strong> <a href="mailto:tu@email.com">tu@email.com</a></p>
-            <p>📱 <strong>Teléfono:</strong> +56 9 1234 5678</p>
-            <p>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tunombre" target="_blank">linkedin.com/in/tunombre</a></p>
-            <p>🐙 <strong>GitHub:</strong> <a href="https://github.com/tunombre" target="_blank">github.com/tunombre</a></p>
+            <p><strong>Email:</strong> <a href="mailto:tu@email.com">carlosdelcid222@proton.me</a></p>
+            <p><strong id="phone-label">Phone:</strong> +502 4080 9821</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/carlos-sebasti%C3%A1n-del-cid-ram%C3%ADrez-5400a3392/" target="_blank">https://www.linkedin.com/in/carlos-sebastian-del-cid-ramirez-5400a3392</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Carlosdelcid05" target="_blank">github.com/Carlosdelcid05</a></p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Tu Nombre. Todos los derechos reservados.</p>
+        <p id="footer-text">&copy; 2026 Carlos del Cid. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript Externo -->
