@@ -1,8 +1,35 @@
 // JavaScript para el portafolio
-// Aquí puedes agregar tu código JavaScript
-
-// Ejemplo: Función para el menú hamburguesa (para implementar en el futuro)
+// Menú hamburguesa para versión móvil
 document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = navMenu.querySelectorAll('a');
+
+    menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
+    });
+
+    // Cerrar menú cuando se hace click en un enlace
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Cerrar menú cuando se hace click fuera
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navMenu.contains(event.target) || menuToggle.contains(event.target);
+        if (!isClickInsideNav && navMenu.classList.contains('active')) {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
     console.log('Portafolio cargado correctamente');
 
     const themeToggle = document.getElementById('theme-toggle');
@@ -32,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
             project1Title: 'Mathematical Academic Software',
             project1Desc: 'Multiplatform program developed in Flutter for the academic resolution of numerical calculations through sophisticated mathematical algorithms in a didactic way.',
             project2Title: 'Clothing Inventory and Sales System',
-            project2Desc: 'Coming soon',
+            project2Desc: 'Clothing inventory system for the administration and sale of bulk clothing developed with Flutter and PostgreSQL',
             project3Title: 'Coming soon',
             project3Desc: 'Coming soon',
             technologiesLabel: 'Technologies:',
             contactTitle: 'Contact',
             phoneLabel: 'Phone:',
             footerText: '© 2026 Carlos del Cid. All rights reserved.',
-            languageButton: 'ES',
+            languageButton: 'Español',
             languageAria: 'Switch language to Spanish',
             themeDark: 'Dark',
             themeLight: 'Light',
@@ -64,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function() {
             project1Title: 'Software Académico Matemático',
             project1Desc: 'Programa multiplataforma desarrollado en Flutter para la resolución académica de cálculos numéricos por medio de algoritmos matemáticos sofisticados de forma didáctica.',
             project2Title: 'Sistema de Inventario y Venta de Ropa',
-            project2Desc: 'Proximamente',
-            project3Title: 'Proximamente',
-            project3Desc: 'Proximamente',
+            project2Desc: 'Sistema de inventario para la administración y venta de ropa de paca desarrollado con Flutter y PostgreSQL',
+            project3Title: 'Próximamente',
+            project3Desc: 'Próximamente',
             technologiesLabel: 'Tecnologías:',
             contactTitle: 'Contacto',
             phoneLabel: 'Teléfono:',
-            footerText: '© 2026 Tu Nombre. Todos los derechos reservados.',
-            languageButton: 'EN',
+            footerText: '© 2026 Carlos del Cid. Todos los derechos reservados.',
+            languageButton: 'English',
             languageAria: 'Cambiar idioma a inglés',
             themeDark: 'Oscuro',
             themeLight: 'Claro',
