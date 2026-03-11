@@ -1,0 +1,169 @@
+.game-header {
+    border-bottom: 2px solid var(--color-border);
+    padding: 24px;
+    text-align: center;
+}
+.game-header h1 { font-size: clamp(1.4rem, 3vw, 2.2rem); letter-spacing: .04em; }
+.game-header p  { color: var(--color-muted); font-size: .95rem; margin-top: 6px; }
+
+.game-switcher {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--color-border);
+    background-color: var(--color-bg);
+}
+.game-switcher button {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: none;
+    border-right: 1px solid var(--color-border);
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.game-switcher button:last-child { border-right: none; }
+.game-switcher button:hover      { background-color: var(--color-hover); }
+.game-switcher button.active {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+.game-area {
+    display: none;
+    max-width: 520px;
+    margin: 32px auto;
+    padding: 0 14px;
+}
+.game-area.visible { display: block; }
+
+.game-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--color-border);
+    border-bottom: none;
+    padding: 10px 16px;
+    background-color: var(--color-bg);
+}
+.game-topbar span { font-size: .9rem; }
+.game-topbar button {
+    font-family: 'Courier New', monospace;
+    font-size: .85rem;
+    font-weight: bold;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 4px 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.game-topbar button:hover { background-color: var(--color-hover); }
+.t-controls {
+    display: flex;
+    gap: 6px;
+}
+
+/* Minesweeper */
+#ms-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    border: 2px solid var(--color-border);
+    border-top: none;
+    background-color: var(--color-border);
+    gap: 1px;
+    user-select: none;
+}
+.ms-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: clamp(.6rem, 2vw, .8rem);
+    cursor: pointer;
+    background-color: var(--color-bg);
+    transition: background-color .1s;
+}
+.ms-cell:hover:not(.ms-revealed) { background-color: var(--color-hover); }
+.ms-cell.ms-revealed {
+    cursor: default;
+    background-color: var(--color-hover);
+}
+.ms-cell.ms-mine-hit {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+#ms-message, #t-message {
+    border: 2px solid var(--color-border);
+    border-top: none;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: .85rem;
+    background-color: var(--color-bg);
+    min-height: 34px;
+    color: var(--color-muted);
+}
+
+/* 2048 */
+#t-board {
+    border: 2px solid var(--color-border);
+    border-top: none;
+    background-color: var(--color-border);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
+#t-bg-cells {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+.t-bg-cell { background-color: var(--color-bg); }
+#t-tile-layer { position: absolute; inset: 0; }
+.t-tile {
+    position: absolute;
+    width: calc(25% - 0.75px);
+    height: calc(25% - 0.75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: clamp(.65rem, 3vw, 1.2rem);
+    box-sizing: border-box;
+    transition: top 105ms ease, left 105ms ease;
+    will-change: top, left;
+}
+.t-tile.t-appear { animation: tAppear 130ms ease-out both; }
+.t-tile.t-pop    { animation: tPop    160ms ease-out both; }
+@keyframes tAppear {
+    from { transform: scale(0);    opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+@keyframes tPop {
+    0%   { transform: scale(1);    }
+    45%  { transform: scale(1.18); }
+    100% { transform: scale(1);    }
+}
+
+#t-hint {
+    text-align: center;
+    color: var(--color-muted);
+    font-size: .75rem;
+    margin-top: 8px;
+}
+
+.game-footer {
+    border-top: 2px solid var(--color-border);
+    text-align: center;
+    padding: 24px;
+    margin-top: 40px;
+    color: var(--color-muted);
+    font-size: .85rem;
+}
