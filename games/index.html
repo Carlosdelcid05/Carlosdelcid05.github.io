@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg — Games</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../easter-egg.css">
+</head>
+<body>
+
+    <header class="game-header">
+        <h1>Easter Egg</h1>
+        <p>You found it. Here are some games.</p>
+    </header>
+
+    <nav class="game-switcher">
+        <button id="btn-ms" class="active" onclick="switchGame('minesweeper')">Minesweeper</button>
+        <button id="btn-t" onclick="switchGame('2048')">2048</button>
+    </nav>
+
+    <div id="area-minesweeper" class="game-area visible">
+        <div class="game-topbar">
+            <span id="ms-mines">Mines: 10</span>
+            <button onclick="msNewGame()">New game</button>
+            <span id="ms-timer">0s</span>
+        </div>
+        <div id="ms-board"></div>
+        <div id="ms-message"></div>
+    </div>
+
+    <div id="area-2048" class="game-area">
+        <div class="game-topbar">
+            <span>Score: <strong id="t-score">0</strong></span>
+            <div class="t-controls">
+                <button onclick="tUndo()" id="t-undo-btn" disabled>Undo</button>
+                <button onclick="tNewGame()">New game</button>
+            </div>
+            <span>Best: <strong id="t-best">0</strong></span>
+        </div>
+        <div id="t-board">
+            <div id="t-bg-cells"></div>
+            <div id="t-tile-layer"></div>
+        </div>
+        <div id="t-message"></div>
+        <p id="t-hint">Arrow keys to move &middot; Swipe on mobile</p>
+    </div>
+
+    <footer class="game-footer">
+        <p>&copy; 2026 Carlos del Cid</p>
+    </footer>
+
+<script src="../easter-egg.js"></script>
+</body>
+</html>
