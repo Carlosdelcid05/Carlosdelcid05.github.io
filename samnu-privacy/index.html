@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMNU – Privacy Policy</title>
+    <style>
+        :root {
+            --color-bg: #ffffff;
+            --color-text: #000000;
+            --color-border: #000000;
+            --color-accent: #333333;
+            --color-hover: #f5f5f5;
+            --color-muted: #5c5c5c;
+            --spacing-sm: 8px;
+            --spacing-md: 14px;
+            --spacing-lg: 24px;
+            --spacing-xl: 40px;
+            --transition: all 0.2s ease;
+        }
+
+        [data-theme='dark'] {
+            --color-bg: #111111;
+            --color-text: #f5f5f5;
+            --color-border: #f5f5f5;
+            --color-accent: #e0e0e0;
+            --color-hover: #222222;
+            --color-muted: #c7c7c7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.75;
+            min-height: 100vh;
+            text-rendering: geometricPrecision;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        header {
+            border-bottom: 2px solid var(--color-border);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            text-align: center;
+            background-color: var(--color-bg);
+        }
+
+        header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: 0.04em;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: var(--color-muted);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--color-border);
+            background-color: var(--color-bg);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .nav-back {
+            color: var(--color-text);
+            text-decoration: none;
+            padding: var(--spacing-md) 0;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .nav-back:hover {
+            color: var(--color-muted);
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 0;
+        }
+
+        .theme-toggle,
+        .lang-toggle {
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            border: none;
+            border-left: 1px solid var(--color-border);
+            padding: var(--spacing-md) var(--spacing-lg);
+            transition: var(--transition);
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .theme-toggle:hover,
+        .lang-toggle:hover {
+            background-color: var(--color-hover);
+        }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-lg);
+        }
+
+        .policy-meta {
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-md) var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            font-size: 0.9rem;
+            color: var(--color-muted);
+        }
+
+        .policy-meta strong {
+            color: var(--color-text);
+        }
+
+        section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        section h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        section p,
+        section li {
+            font-size: 0.97rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        section ul {
+            padding-left: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+        }
+
+        section ul li::marker {
+            content: "– ";
+        }
+
+        a {
+            color: var(--color-text);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--color-muted);
+        }
+
+        footer {
+            border-top: 2px solid var(--color-border);
+            text-align: center;
+            padding: var(--spacing-lg);
+            font-size: 0.85rem;
+            color: var(--color-muted);
+        }
+
+        .lang-section {
+            display: none;
+        }
+
+        .lang-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SAMNU</h1>
+        <p id="header-sub">Privacy Policy</p>
+    </header>
+
+    <nav>
+        <a class="nav-back" href="../" id="nav-back">&larr; Portfolio</a>
+        <div class="nav-controls">
+            <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">Español</button>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">Dark</button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ===== ENGLISH ===== -->
+        <div class="lang-section active" id="lang-en">
+
+            <div class="policy-meta">
+                <strong>App:</strong> SAMNU &nbsp;|&nbsp;
+                <strong>Platform:</strong> Android (Google Play) &nbsp;|&nbsp;
+                <strong>Last updated:</strong> March 11, 2026 &nbsp;|&nbsp;
+                <strong>Effective date:</strong> March 11, 2026
+            </div>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>
+                    This Privacy Policy describes how <strong>SAMNU</strong> ("the App", "we", "our") collects,
+                    uses, and protects the information of users ("you") when you use our Android application.
+                    By downloading or using SAMNU, you agree to the practices described in this policy.
+                </p>
+            </section>
+
+            <section>
+                <h2>2. Information We Collect</h2>
+                <p>We may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Information you provide directly:</strong> account data (name, email address) when you register or contact us.</li>
+                    <li><strong>Usage data:</strong> interactions within the app, session duration, features used, and error reports.</li>
+                    <li><strong>Device information:</strong> device model, operating system version, unique device identifiers, and mobile network information.</li>
+                    <li><strong>Location data:</strong> approximate location (if you grant permission), used solely for app functionality.</li>
+                </ul>
+                <p>We do <strong>not</strong> collect sensitive personal data such as financial information, health records, or biometric data.</p>
+            </section>
+
+            <section>
+                <h2>3. How We Use Your Information</h2>
+                <p>The information collected is used to:</p>
+                <ul>
+                    <li>Provide, operate, and improve the App's features and performance.</li>
+                    <li>Respond to your support requests and communications.</li>
+                    <li>Send important notices (updates, security alerts, policy changes).</li>
+                    <li>Analyze usage patterns in aggregate to improve user experience.</li>
+                    <li>Ensure the security of the App and prevent fraudulent use.</li>
+                </ul>
+                <p>We will <strong>never</strong> sell or rent your personal information to third parties.</p>
+            </section>
+
+            <section>
+                <h2>4. Data Sharing</h2>
+                <p>We may share data only in the following circumstances:</p>
+                <ul>
+                    <li><strong>Service providers:</strong> trusted third-party services that help us operate the App (e.g., analytics, cloud storage), bound by confidentiality agreements.</li>
+                    <li><strong>Legal compliance:</strong> when required by law, court order, or governmental authority.</li>
+                    <li><strong>Business transfers:</strong> in the event of a merger or acquisition, users will be notified before data is transferred.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Third-Party Services</h2>
+                <p>
+                    The App may integrate third-party services such as Google Analytics for Firebase, Google Play Services,
+                    or similar tools. These services have their own Privacy Policies. We encourage you to review them:
+                </p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy Information</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Data Retention</h2>
+                <p>
+                    We retain personal data only for as long as necessary to fulfill the purposes outlined in this policy,
+                    or as required by law. When data is no longer needed, it is securely deleted or anonymized.
+                </p>
+            </section>
+
+            <section>
+                <h2>7. Your Rights</h2>
+                <p>Depending on your jurisdiction, you may have the right to:</p>
+                <ul>
+                    <li><strong>Access:</strong> request a copy of the personal data we hold about you.</li>
+                    <li><strong>Correction:</strong> request correction of inaccurate or incomplete data.</li>
+                    <li><strong>Deletion:</strong> request deletion of your personal data ("right to be forgotten").</li>
+                    <li><strong>Restriction:</strong> request that we limit how we process your data.</li>
+                    <li><strong>Data portability:</strong> receive your data in a structured, machine-readable format.</li>
+                    <li><strong>Objection:</strong> object to certain types of data processing.</li>
+                </ul>
+                <p>To exercise any of these rights, contact us at the address below.</p>
+            </section>
+
+            <section>
+                <h2>8. Children's Privacy</h2>
+                <p>
+                    SAMNU is not directed to children under the age of 13. We do not knowingly collect personal information
+                    from children under 13. If you believe we have inadvertently collected such information, please
+                    contact us immediately and we will delete it promptly.
+                </p>
+            </section>
+
+            <section>
+                <h2>9. Security</h2>
+                <p>
+                    We implement commercially reasonable technical and organizational security measures to protect
+                    your data against unauthorized access, alteration, disclosure, or destruction. However, no
+                    method of transmission over the internet or electronic storage is 100% secure.
+                </p>
+            </section>
+
+            <section>
+                <h2>10. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. When we do, we will revise the
+                    "Last updated" date at the top of this page and, where appropriate, notify you through
+                    the App or via email. Continued use of the App after changes constitutes acceptance of the
+                    updated policy.
+                </p>
+            </section>
+
+            <section>
+                <h2>11. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+                <ul>
+                    <li><strong>Developer:</strong> Carlos del Cid</li>
+                    <li><strong>Email:</strong> <a href="mailto:carlosdelcid05@gmail.com">carlosdelcid05@gmail.com</a></li>
+                    <li><strong>Website:</strong> <a href="https://carlosdelcid05.github.io" target="_blank" rel="noopener noreferrer">carlosdelcid05.github.io</a></li>
+                </ul>
+            </section>
+
+        </div><!-- /lang-en -->
+
+        <!-- ===== ESPAÑOL ===== -->
+        <div class="lang-section" id="lang-es">
+
+            <div class="policy-meta">
+                <strong>App:</strong> SAMNU &nbsp;|&nbsp;
+                <strong>Plataforma:</strong> Android (Google Play) &nbsp;|&nbsp;
+                <strong>Última actualización:</strong> 11 de marzo de 2026 &nbsp;|&nbsp;
+                <strong>Fecha de vigencia:</strong> 11 de marzo de 2026
+            </div>
+
+            <section>
+                <h2>1. Introducción</h2>
+                <p>
+                    Esta Política de Privacidad describe cómo <strong>SAMNU</strong> ("la App", "nosotros", "nuestro")
+                    recopila, usa y protege la información de los usuarios ("usted") al utilizar nuestra aplicación Android.
+                    Al descargar o usar SAMNU, usted acepta las prácticas descritas en esta política.
+                </p>
+            </section>
+
+            <section>
+                <h2>2. Información que Recopilamos</h2>
+                <p>Podemos recopilar los siguientes tipos de información:</p>
+                <ul>
+                    <li><strong>Información que usted proporciona directamente:</strong> datos de cuenta (nombre, correo electrónico) al registrarse o contactarnos.</li>
+                    <li><strong>Datos de uso:</strong> interacciones dentro de la app, duración de sesión, funciones utilizadas e informes de errores.</li>
+                    <li><strong>Información del dispositivo:</strong> modelo, versión de sistema operativo, identificadores únicos del dispositivo e información de red móvil.</li>
+                    <li><strong>Datos de ubicación:</strong> ubicación aproximada (si otorga permiso), utilizada únicamente para la funcionalidad de la App.</li>
+                </ul>
+                <p>No recopilamos datos personales sensibles como información financiera, historial médico ni datos biométricos.</p>
+            </section>
+
+            <section>
+                <h2>3. Cómo Usamos su Información</h2>
+                <p>La información recopilada se utiliza para:</p>
+                <ul>
+                    <li>Proveer, operar y mejorar las funciones y el rendimiento de la App.</li>
+                    <li>Responder sus solicitudes de soporte y comunicaciones.</li>
+                    <li>Enviar avisos importantes (actualizaciones, alertas de seguridad, cambios de política).</li>
+                    <li>Analizar patrones de uso de forma agregada para mejorar la experiencia del usuario.</li>
+                    <li>Garantizar la seguridad de la App y prevenir uso fraudulento.</li>
+                </ul>
+                <p><strong>Nunca</strong> venderemos ni alquilaremos su información personal a terceros.</p>
+            </section>
+
+            <section>
+                <h2>4. Compartición de Datos</h2>
+                <p>Solo compartimos datos en las siguientes circunstancias:</p>
+                <ul>
+                    <li><strong>Proveedores de servicios:</strong> terceros de confianza que nos ayudan a operar la App (p. ej., analíticas, almacenamiento en la nube), sujetos a acuerdos de confidencialidad.</li>
+                    <li><strong>Cumplimiento legal:</strong> cuando la ley, una orden judicial o una autoridad gubernamental lo requiera.</li>
+                    <li><strong>Transferencias comerciales:</strong> en caso de fusión o adquisición, los usuarios serán notificados antes de que sus datos sean transferidos.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Servicios de Terceros</h2>
+                <p>
+                    La App puede integrar servicios de terceros como Google Analytics for Firebase, Google Play Services
+                    u herramientas similares. Estos servicios tienen sus propias Políticas de Privacidad. Le recomendamos revisarlas:
+                </p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Información de Privacidad de Firebase</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Retención de Datos</h2>
+                <p>
+                    Conservamos los datos personales únicamente el tiempo necesario para cumplir los propósitos descritos
+                    en esta política o según lo exija la ley. Cuando los datos ya no son necesarios, se eliminan de forma
+                    segura o se anonimizan.
+                </p>
+            </section>
+
+            <section>
+                <h2>7. Sus Derechos</h2>
+                <p>Dependiendo de su jurisdicción, usted puede tener derecho a:</p>
+                <ul>
+                    <li><strong>Acceso:</strong> solicitar una copia de los datos personales que tenemos sobre usted.</li>
+                    <li><strong>Corrección:</strong> solicitar la corrección de datos inexactos o incompletos.</li>
+                    <li><strong>Eliminación:</strong> solicitar la eliminación de sus datos personales ("derecho al olvido").</li>
+                    <li><strong>Restricción:</strong> solicitar que limitemos el procesamiento de sus datos.</li>
+                    <li><strong>Portabilidad:</strong> recibir sus datos en un formato estructurado y legible por máquina.</li>
+                    <li><strong>Oposición:</strong> oponerse a ciertos tipos de procesamiento de datos.</li>
+                </ul>
+                <p>Para ejercer cualquiera de estos derechos, contáctenos a la dirección indicada abajo.</p>
+            </section>
+
+            <section>
+                <h2>8. Privacidad de Menores</h2>
+                <p>
+                    SAMNU no está dirigida a menores de 13 años. No recopilamos intencionalmente información personal de
+                    menores de 13 años. Si cree que hemos recopilado dicha información de forma inadvertida, contáctenos
+                    de inmediato y la eliminaremos sin demora.
+                </p>
+            </section>
+
+            <section>
+                <h2>9. Seguridad</h2>
+                <p>
+                    Implementamos medidas de seguridad técnicas y organizativas razonables para proteger sus datos
+                    contra acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método
+                    de transmisión por internet o almacenamiento electrónico es 100% seguro.
+                </p>
+            </section>
+
+            <section>
+                <h2>10. Cambios a Esta Política</h2>
+                <p>
+                    Podemos actualizar esta Política de Privacidad periódicamente. Cuando lo hagamos, revisaremos
+                    la fecha de "Última actualización" en la parte superior de esta página y, cuando corresponda,
+                    le notificaremos a través de la App o por correo electrónico. El uso continuo de la App después
+                    de los cambios constituye la aceptación de la política actualizada.
+                </p>
+            </section>
+
+            <section>
+                <h2>11. Contáctenos</h2>
+                <p>Si tiene preguntas, inquietudes o solicitudes sobre esta Política de Privacidad, contáctenos:</p>
+                <ul>
+                    <li><strong>Desarrollador:</strong> Carlos del Cid</li>
+                    <li><strong>Correo:</strong> <a href="mailto:carlosdelcid05@gmail.com">carlosdelcid05@gmail.com</a></li>
+                    <li><strong>Sitio web:</strong> <a href="https://carlosdelcid05.github.io" target="_blank" rel="noopener noreferrer">carlosdelcid05.github.io</a></li>
+                </ul>
+            </section>
+
+        </div><!-- /lang-es -->
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Carlos del Cid &mdash; SAMNU. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const langBtn = document.getElementById('lang-toggle');
+        const headerSub = document.getElementById('header-sub');
+        const navBack = document.getElementById('nav-back');
+        const langEn = document.getElementById('lang-en');
+        const langEs = document.getElementById('lang-es');
+
+        let currentLang = 'en';
+
+        // ---- Theme ----
+        const savedTheme = localStorage.getItem('samnu-privacy-theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeBtn.textContent = savedTheme === 'dark' ? 'Light' : 'Dark';
+        }
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const next = isDark ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            themeBtn.textContent = next === 'dark' ? 'Light' : 'Dark';
+            localStorage.setItem('samnu-privacy-theme', next);
+        });
+
+        // ---- Language ----
+        langBtn.addEventListener('click', () => {
+            if (currentLang === 'en') {
+                currentLang = 'es';
+                langEn.classList.remove('active');
+                langEs.classList.add('active');
+                langBtn.textContent = 'English';
+                headerSub.textContent = 'Política de Privacidad';
+                navBack.textContent = '\u2190 Portafolio';
+                document.documentElement.lang = 'es';
+            } else {
+                currentLang = 'en';
+                langEs.classList.remove('active');
+                langEn.classList.add('active');
+                langBtn.textContent = 'Español';
+                headerSub.textContent = 'Privacy Policy';
+                navBack.textContent = '\u2190 Portfolio';
+                document.documentElement.lang = 'en';
+            }
+        });
+    </script>
+
+</body>
+</html>
