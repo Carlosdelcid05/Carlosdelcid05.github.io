@@ -51,10 +51,20 @@ document.addEventListener('DOMContentLoaded', function() {
             aboutTitle: 'About Me',
             aboutText: 'I am a Systems and Computer Science Engineer passionate about technology and innovation. I have experience in software development, databases, and information systems. I am dedicated to creating efficient and scalable solutions to solve complex problems.',
             skillsTitle: 'Technical Skills',
-            skillStack: 'Tech Stack',
-            skillAlgorithms: 'Algorithms & Data Structures',
-            skillSystems: 'Systems & Low-Level',
-            skillModeling: 'Modeling & Optimization',
+            skillBackendTitle: 'Backend & Scripting',
+            skillBackendDesc: 'Java, C#, Go, Python, Bash',
+            skillFrontendTitle: 'Frontend & Mobile',
+            skillFrontendDesc: 'JavaScript, Dart, Flutter basics',
+            skillDatabasesTitle: 'Databases',
+            skillDatabasesDesc: 'SQL, relational modeling, query optimization basics',
+            skillCloudTitle: 'Cloud & DevOps',
+            skillCloudDesc: 'AWS fundamentals, AWS IoT Core, Linux environments, task automation',
+            skillIoTTitle: 'IoT & Embedded',
+            skillIoTDesc: 'Arduino, Raspberry Pi, sensors/actuators, serial communication, MQTT',
+            skillAiTitle: 'AI API Integrations',
+            skillAiDesc: 'DeepSeek and OpenRouter integration for intelligent assistants and automation',
+            skillFoundationsTitle: 'Computer Science Foundations',
+            skillFoundationsDesc: 'Algorithms, data structures, digital logic, assembly, operating systems, modeling and optimization',
             projectsTitle: 'Projects',
             project1Title: 'Mathematical Academic Software',
             project1Desc: 'Multiplatform program developed in Flutter for the academic resolution of numerical calculations through sophisticated mathematical algorithms in a didactic way.',
@@ -83,10 +93,20 @@ document.addEventListener('DOMContentLoaded', function() {
             aboutTitle: 'Acerca de mí',
             aboutText: 'Soy un Ingeniero en Ciencias y Sistemas apasionado por la tecnología y la innovación. Tengo experiencia en desarrollo de software, bases de datos y sistemas de información. Me dedico a crear soluciones eficientes y escalables para resolver problemas complejos.',
             skillsTitle: 'Habilidades Técnicas',
-            skillStack: 'Stack Tecnológico',
-            skillAlgorithms: 'Algoritmos y Estructuras de Datos',
-            skillSystems: 'Sistemas y Bajo Nivel',
-            skillModeling: 'Modelado y Optimización',
+            skillBackendTitle: 'Backend y Scripting',
+            skillBackendDesc: 'Java, C#, Go, Python, Bash',
+            skillFrontendTitle: 'Frontend y Móvil',
+            skillFrontendDesc: 'JavaScript, Dart, bases de Flutter',
+            skillDatabasesTitle: 'Bases de Datos',
+            skillDatabasesDesc: 'SQL, modelado relacional, fundamentos de optimización de consultas',
+            skillCloudTitle: 'Cloud y DevOps',
+            skillCloudDesc: 'Fundamentos de AWS, AWS IoT Core, entornos Linux, automatización de tareas',
+            skillIoTTitle: 'IoT y Embebidos',
+            skillIoTDesc: 'Arduino, Raspberry Pi, sensores/actuadores, comunicación serial, MQTT',
+            skillAiTitle: 'Integración de APIs de IA',
+            skillAiDesc: 'Integración con DeepSeek y OpenRouter para asistentes inteligentes y automatización',
+            skillFoundationsTitle: 'Fundamentos de Ciencias de la Computación',
+            skillFoundationsDesc: 'Algoritmos, estructuras de datos, lógica digital, ensamblador, sistemas operativos, modelado y optimización',
             projectsTitle: 'Proyectos',
             project1Title: 'Software Académico Matemático',
             project1Desc: 'Programa multiplataforma desarrollado en Flutter para la resolución académica de cálculos numéricos por medio de algoritmos matemáticos sofisticados de forma didáctica.',
@@ -128,10 +148,20 @@ document.addEventListener('DOMContentLoaded', function() {
         setText('about-title', t.aboutTitle);
         setText('about-text', t.aboutText);
         setText('skills-title', t.skillsTitle);
-        setText('skill-stack', t.skillStack);
-        setText('skill-algorithms', t.skillAlgorithms);
-        setText('skill-systems', t.skillSystems);
-        setText('skill-modeling', t.skillModeling);
+        setText('skill-backend-title', t.skillBackendTitle);
+        setText('skill-backend-desc', t.skillBackendDesc);
+        setText('skill-frontend-title', t.skillFrontendTitle);
+        setText('skill-frontend-desc', t.skillFrontendDesc);
+        setText('skill-databases-title', t.skillDatabasesTitle);
+        setText('skill-databases-desc', t.skillDatabasesDesc);
+        setText('skill-cloud-title', t.skillCloudTitle);
+        setText('skill-cloud-desc', t.skillCloudDesc);
+        setText('skill-iot-title', t.skillIoTTitle);
+        setText('skill-iot-desc', t.skillIoTDesc);
+        setText('skill-ai-title', t.skillAiTitle);
+        setText('skill-ai-desc', t.skillAiDesc);
+        setText('skill-foundations-title', t.skillFoundationsTitle);
+        setText('skill-foundations-desc', t.skillFoundationsDesc);
         setText('projects-title', t.projectsTitle);
         setText('project-1-title', t.project1Title);
         setText('project-1-desc', t.project1Desc);
