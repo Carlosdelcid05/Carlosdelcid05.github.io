@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PEMTREE | Grafo de Estudios Ingeniería Sistemas USAC</title>
+        <meta name="description" content="PEMTREE es una aplicación web interactiva que permite a los estudiantes explorar y visualizar las rutas académicas del PENSUM CLAR 2022, facilitando la planificación de sus estudios.">
+        <meta name="keywords" content="PEMTREE, rutas académicas, PENSUM CLAR 2022, visualizador, planificación de estudios, ingeniería en ciencias y sistemas, USAC, FIUSAC, pemsum ingeniería, USAC, cursos ingeniería sistemas">
+        <meta name="author" content="Trebol4Devop">
+        <meta name="robots" content="index, follow">
+        <link rel="icon" type="image/webp" href="./images/logo_trebol.webp">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="contenedor-app" id="contenedorApp">
+            <button class="tools-toggle" id="tools-toggle">
+                <span>Menú</span>
+            </button>
+
+            <div class="barraHerramienta" id="barraHerramienta">
+                <button class="close-tools-btn" id="close-tools-btn">×</button>
+
+                <div class="barraHerramienta-grupo" id="buscador">
+                    <span class="grupo-etiqueta">Buscador</span>
+                    <input type="text" id="buscadorCurso" placeholder="Buscar código o nombre..." class="input-buscador">
+                </div>
+
+                <div class="barraHerramienta-grupo">
+                    <span class="grupo-etiqueta">Vista</span>
+                    <button id="vistaRecetear">Limpiar</button>
+                    <button id="cursosObligatorios">Optativos</button>
+                </div>
+
+                <div class="barraHerramienta-grupo">
+                    <span class="grupo-etiqueta">Análisis</span>
+                    <button id="btnRutaCritica" class="boton-Ruta">Ruta Crítica</button>
+                    <button id="btnVistaSemestre">Por Semestres</button>
+                </div>
+
+                <div class="barraHerramienta-grupo">
+                    <span class="grupo-etiqueta">Pensum</span>
+                    <select id="pensumSelect" class="select-pensum">
+                        <option value="">Cargando...</option>
+                    </select>
+                </div> 
+
+                <div class="barraHerramienta-grupo">
+                    <span class="grupo-etiqueta">Diseño</span>
+                    <button id="disposicionVertical">Vertical</button>
+                    <button id="disposicionHorizontal">Horizontal</button>
+                </div>
+
+                <div class="barraHerramienta-grupo">
+                    <span class="grupo-etiqueta">Tema</span>
+                    <button id="toggleTema" title="Cambiar tema">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class="zoom-bar" id="zoomBar">
+                <button id="zoomOut" title="Alejar">−</button>
+                <span id="zoomLevel">100%</span>
+                <button id="zoomIn" title="Acercar">+</button>
+                <button id="zoomReset" title="Restablecer zoom">↺</button>
+                <button id="btnGuia" title="Guía de uso">?</button>
+            </div>
+
+            <div class="contenedor-grafica">
+                <div id="infoCard" class="floating-card hidden">
+                    <button class="close-card" onclick="cerrarInfo()">×</button>
+                    <div class="node-details-content">
+                        <p class="seleccionarCurso">Selecciona un curso</p>
+                    </div>
+                </div>
+
+                <div id="grafica"></div>
+                
+                <div class="marcaAgua">
+                    <span>by Trebol4Devop</span>
+                    <img src="./images/logo_trebol.webp" alt="Logo Pequeño">
+                </div>
+            </div>
+
+            <div id="guiaModal" class="guia-modal hidden">
+                <div class="guia-modal-content">
+                    <button class="guia-modal-close" id="guiaModalClose">×</button>
+                    <h2>¡Bienvenido!</h2>
+                    <p>Haz doble clic en un curso para marcarlo como completado. Usa los botones de zoom y el menú para explorar las rutas académicas.</p>
+                    <img src="./images/Guia_de_uso.webp" alt="Guía de uso" class="guia-imagen">
+                    <div class="guia-colaboradores">
+                        <h3>Homenaje a los colaboradores</h3>
+                        <p>Carlos del Cid</p>
+                        <p>José Emanuel Monzón Lémus — 202300539</p>
+                        <p>Ottoniel Fabricio Vásquez Pineda — 202307820</p>
+                        <span class="guia-grupo">Trebol4Devop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
