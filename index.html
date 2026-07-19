@@ -4,132 +4,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - Systems and Computer Science Engineer</title>
-    <!-- CSS Externo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1 id="profile-name">Carlos del Cid <a class="easter-egg-link" href="games/" target="_blank" aria-label="Easter egg"><img src="img/easteregg-icon.png" alt="Easter egg"></a></h1>
-        <p id="profile-role">Systems and Computer Science Engineer</p>
+    <div class="grid-background" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="mesh-gradient" aria-hidden="true"></div>
+
+    <canvas id="particles" class="particles-canvas" aria-hidden="true"></canvas>
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header id="top" class="reveal" data-reveal="up" data-section-theme="warm">
+        <div class="aurora" aria-hidden="true">
+            <div class="aurora-blob aurora-blob-1"></div>
+            <div class="aurora-blob aurora-blob-2"></div>
+            <div class="aurora-blob aurora-blob-3"></div>
+        </div>
+        <div class="header-inner">
+            <div class="prompt-line" aria-hidden="true"><span class="prompt-arrow">&gt;</span> <span class="prompt-path">~/carlos</span><span class="prompt-blink">_</span></div>
+            <h1 id="profile-name" class="holo">
+                Carlos del Cid
+                <a class="easter-egg-link" href="games/" target="_blank" rel="noopener noreferrer" aria-label="Easter egg">
+                    <img src="img/easteregg-icon.png" alt="Easter egg">
+                </a>
+            </h1>
+            <p id="profile-role" class="typewriter" data-text="Systems and Computer Science Engineer"></p>
+            <div class="ascii-divider" aria-hidden="true">
+                ════════════════════════════════════════
+            </div>
+        </div>
     </header>
 
-    <!-- Navegación -->
-    <nav>
+    <nav id="main-nav">
+        <div class="nav-progress" aria-hidden="true">
+            <div class="nav-progress-bar" id="nav-progress-bar"></div>
+        </div>
         <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
+        <div class="nav-pill-track" aria-hidden="true">
+            <div class="nav-pill" id="nav-pill"></div>
+        </div>
         <div id="nav-menu" class="nav-menu">
-            <a id="nav-about" href="#about">About</a>
-            <a id="nav-skills" href="#skills">Skills</a>
-            <a id="nav-projects" href="#projects">Projects</a>
-            <a id="nav-contact" href="#contact">Contact</a>
-            <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch language to Spanish">Español</button>
-            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
+            <a id="nav-about" href="#about" data-section-theme="warm" class="nav-item">
+                <span class="nav-dot" aria-hidden="true"></span>
+                <span class="nav-prefix">01.</span><span class="nav-label">About</span>
+            </a>
+            <a id="nav-skills" href="#skills" data-section-theme="tech" class="nav-item">
+                <span class="nav-dot" aria-hidden="true"></span>
+                <span class="nav-prefix">02.</span><span class="nav-label">Skills</span>
+            </a>
+            <a id="nav-projects" href="#projects" data-section-theme="creative" class="nav-item">
+                <span class="nav-dot" aria-hidden="true"></span>
+                <span class="nav-prefix">03.</span><span class="nav-label">Projects</span>
+            </a>
+            <a id="nav-contact" href="#contact" data-section-theme="action" class="nav-item">
+                <span class="nav-dot" aria-hidden="true"></span>
+                <span class="nav-prefix">04.</span><span class="nav-label">Contact</span>
+            </a>
+            <div class="nav-divider" aria-hidden="true"></div>
+            <button id="language-toggle" class="language-toggle nav-item" type="button" aria-label="Switch language to Spanish" data-section-theme="trust">
+                <span class="nav-dot" aria-hidden="true"></span>
+                <span class="nav-label">Español</span>
+            </button>
+            <button id="theme-toggle" class="theme-toggle nav-item" type="button" aria-label="Switch to dark theme" data-section-theme="creative">
+                <span class="nav-dot" aria-hidden="true"></span>
+                <span class="nav-label">Dark</span>
+            </button>
         </div>
     </nav>
 
-    <!-- Sección Acerca de -->
-    <section id="about">
-        <h2 id="about-title">About Me</h2>
-        <div class="about-content">
-            <p id="about-text">
-                I am a Systems and Computer Science Engineer passionate about technology and innovation.
-                I have experience in software development, databases, and information systems.
-                I am dedicated to creating efficient and scalable solutions to solve complex problems.
-            </p>
-        </div>
-    </section>
-
-    <!-- Sección Habilidades -->
-    <section id="skills">
-        <h2 id="skills-title">Technical Skills</h2>
-        <div class="skills">
-            <div class="skill-card">
-                <h3 id="skill-backend-title">Backend & Scripting</h3>
-                <p id="skill-backend-desc">Java, C#, Go, Python, Bash</p>
+    <main>
+        <section id="about" class="reveal" data-reveal="up" data-section-theme="trust">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 id="about-title">About Me</h2>
+                <div class="section-line" aria-hidden="true"></div>
             </div>
-            <div class="skill-card">
-                <h3 id="skill-frontend-title">Frontend & Mobile</h3>
-                <p id="skill-frontend-desc">JavaScript, Dart, Flutter basics</p>
-            </div>
-            <div class="skill-card">
-                <h3 id="skill-databases-title">Databases</h3>
-                <p id="skill-databases-desc">SQL, relational modeling, query optimization basics</p>
-            </div>
-            <div class="skill-card">
-                <h3 id="skill-cloud-title">Cloud & DevOps</h3>
-                <p id="skill-cloud-desc">AWS fundamentals, AWS IoT Core, Linux environments, task automation</p>
-            </div>
-            <div class="skill-card">
-                <h3 id="skill-iot-title">IoT & Embedded</h3>
-                <p id="skill-iot-desc">Arduino, Raspberry Pi, sensors/actuators, serial communication, MQTT</p>
-            </div>
-            <div class="skill-card">
-                <h3 id="skill-ai-title">AI API Integrations</h3>
-                <p id="skill-ai-desc">DeepSeek and OpenRouter integration for intelligent assistants and automation</p>
-            </div>
-            <div class="skill-card">
-                <h3 id="skill-foundations-title">Computer Science Foundations</h3>
-                <p id="skill-foundations-desc">Algorithms, data structures, digital logic, assembly, operating systems, modeling and optimization</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Proyectos -->
-    <section id="projects">
-        <h2 id="projects-title">Projects</h2>
-        <div class="projects">
-            <a href="https://samnu.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card-link">
-            <div class="project-card">
-                <h3 id="project-1-title">Mathematical Academic Software</h3>
-                <p id="project-1-desc">
-                Multiplatform program developed in Flutter for the academic resolution of numerical calculations through sophisticated mathematical algorithms in a didactic way.
+            <div class="about-content">
+                <span class="bracket bracket-left" aria-hidden="true">[</span>
+                <p id="about-text">
+                    I am a Systems and Computer Science Engineer passionate about technology and innovation.
+                    I have experience in software development, databases, and information systems.
+                    I am dedicated to creating efficient and scalable solutions to solve complex problems.
                 </p>
-                <p><strong id="project-tech-label-1">Technologies:</strong> Flutter, Dart</p>
+                <span class="bracket bracket-right" aria-hidden="true">]</span>
             </div>
-            </a>
+        </section>
 
-            <a href="analizador/" class="project-card-link">
-            <div class="project-card">
-                <h3 id="project-3-title">Code Analyzer - Local Compiler</h3>
-                <p id="project-3-desc">
-                    Frontend for code analysis with local compiler integration, execution output, syntax/semantic error reporting, symbol table, and AST visualization.
-                </p>
-                <p><strong id="project-tech-label-3">Technologies:</strong> HTML, CSS, JavaScript, Jison (Parser)</p>
+        <section id="skills" class="reveal" data-reveal="up" data-section-theme="tech">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 id="skills-title">Technical Skills</h2>
+                <div class="section-line" aria-hidden="true"></div>
             </div>
-            </a>
-            <a href="pemtree-legacy/" class="project-card-link">
-            <div class="project-card">
-                <h3>PEMTREE Legacy</h3>
-                <p>
-                    Interactive graph visualizer for academic course paths and prerequisites. Explore pensum routes, critical paths, and semester planning.
-                </p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript (Vanilla ES Modules)</p>
+            <div class="skills">
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #3b82f6; --card-accent-soft: rgba(59, 130, 246, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">{ }</div>
+                    <h3 id="skill-backend-title">Backend & Scripting</h3>
+                    <p id="skill-backend-desc">Java, C#, Go, Python, Rust, Bash</p>
+                    <div class="skill-bar"><span style="--w: 90%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #ec4899; --card-accent-soft: rgba(236, 72, 153, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+                    <h3 id="skill-frontend-title">Frontend & Mobile</h3>
+                    <p id="skill-frontend-desc">JavaScript, Dart, Flutter basics</p>
+                    <div class="skill-bar"><span style="--w: 75%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #f59e0b; --card-accent-soft: rgba(245, 158, 11, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ▤ ]</div>
+                    <h3 id="skill-databases-title">Databases</h3>
+                    <p id="skill-databases-desc">SQL, relational modeling, query optimization basics</p>
+                    <div class="skill-bar"><span style="--w: 80%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #06b6d4; --card-accent-soft: rgba(6, 182, 212, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ☁ ]</div>
+                    <h3 id="skill-cloud-title">Cloud & DevOps</h3>
+                    <p id="skill-cloud-desc">AWS fundamentals, AWS IoT Core, Linux environments, task automation</p>
+                    <div class="skill-bar"><span style="--w: 70%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #10b981; --card-accent-soft: rgba(16, 185, 129, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ⚙ ]</div>
+                    <h3 id="skill-iot-title">IoT & Embedded</h3>
+                    <p id="skill-iot-desc">Arduino, Raspberry Pi, sensors/actuators, serial communication, MQTT</p>
+                    <div class="skill-bar"><span style="--w: 78%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #a855f7; --card-accent-soft: rgba(168, 85, 247, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ◈ ]</div>
+                    <h3 id="skill-ai-title">AI API Integrations</h3>
+                    <p id="skill-ai-desc">DeepSeek and OpenRouter integration for intelligent assistants and automation</p>
+                    <div class="skill-bar"><span style="--w: 72%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #64748b; --card-accent-soft: rgba(100, 116, 139, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ Σ ]</div>
+                    <h3 id="skill-foundations-title">Computer Science Foundations</h3>
+                    <p id="skill-foundations-desc">Algorithms, data structures, digital logic, assembly, operating systems, modeling and optimization</p>
+                    <div class="skill-bar"><span style="--w: 88%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #f97316; --card-accent-soft: rgba(249, 115, 22, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ NoSQL ]</div>
+                    <h3 id="skill-nosql-title">NoSQL Databases</h3>
+                    <p id="skill-nosql-desc">Neo4J (graph), MongoDB (document), Redis (in-memory key-value)</p>
+                    <div class="skill-bar"><span style="--w: 60%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #84cc16; --card-accent-soft: rgba(132, 204, 22, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ⇄ ]</div>
+                    <h3 id="skill-scrum-title">SCRUM</h3>
+                    <p id="skill-scrum-desc">Agile methodology, sprints, user stories, daily standups, retrospectives</p>
+                    <div class="skill-bar"><span style="--w: 65%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #ef4444; --card-accent-soft: rgba(239, 68, 68, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ⎇ ]</div>
+                    <h3 id="skill-gitflow-title">GitFlow</h3>
+                    <p id="skill-gitflow-desc">Branching model with main, develop, feature, release and hotfix workflows</p>
+                    <div class="skill-bar"><span style="--w: 65%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #14b8a6; --card-accent-soft: rgba(20, 184, 166, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ↻ ]</div>
+                    <h3 id="skill-cicd-title">CI/CD</h3>
+                    <p id="skill-cicd-desc">Continuous integration and deployment pipelines, automated testing and delivery</p>
+                    <div class="skill-bar"><span style="--w: 55%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #6366f1; --card-accent-soft: rgba(99, 102, 241, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ≡ ]</div>
+                    <h3 id="skill-networking-title">Layer 2 Networking</h3>
+                    <p id="skill-networking-desc">VLANs, STP, EtherChannel, switching fundamentals, MAC tables</p>
+                    <div class="skill-bar"><span style="--w: 55%"></span></div>
+                </div>
+                <div class="skill-card tilt" data-tilt-depth="6" style="--card-accent: #0ea5e9; --card-accent-soft: rgba(14, 165, 233, 0.18);">
+                    <div class="skill-icon" aria-hidden="true">[ ▢ ]</div>
+                    <h3 id="skill-docker-title">Docker & Docker Compose</h3>
+                    <p id="skill-docker-desc">Containerization, images, multi-container orchestration with compose files</p>
+                    <div class="skill-bar"><span style="--w: 60%"></span></div>
+                </div>
             </div>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Contacto -->
-    <section id="contact">
-        <h2 id="contact-title">Contact</h2>
-        <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:tu@email.com">carlosdelcid222@proton.me</a></p>
-            <p><strong id="phone-label">Phone:</strong> +502 4080 9821</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/carlos-sebasti%C3%A1n-del-cid-ram%C3%ADrez-5400a3392/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">linkedin.com/in/carlos-del-cid</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/Carlosdelcid05" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">github.com/Carlosdelcid05</a></p>
-        </div>
-    </section>
+        <section id="projects" class="reveal" data-reveal="up" data-section-theme="creative">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 id="projects-title">Projects</h2>
+                <div class="section-line" aria-hidden="true"></div>
+            </div>
+            <div class="projects">
+                <a href="https://samnu.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card-link tilt" data-tilt-depth="5" style="--card-accent: #ec4899; --card-accent-soft: rgba(236, 72, 153, 0.18);">
+                    <div class="project-card">
+                        <div class="project-tag" aria-hidden="true">EXTERNAL</div>
+                        <h3 id="project-1-title">Mathematical Academic Software</h3>
+                        <p id="project-1-desc">
+                            Multiplatform program developed in Flutter for the academic resolution of numerical calculations through sophisticated mathematical algorithms in a didactic way.
+                        </p>
+                        <p class="project-tech"><strong id="project-tech-label-1">Technologies:</strong> Flutter, Dart</p>
+                        <div class="project-arrow" aria-hidden="true">→</div>
+                    </div>
+                </a>
 
-    <!-- Footer -->
+                <a href="analizador/" class="project-card-link tilt" data-tilt-depth="5" style="--card-accent: #06b6d4; --card-accent-soft: rgba(6, 182, 212, 0.18);">
+                    <div class="project-card">
+                        <div class="project-tag" aria-hidden="true">INTERNAL</div>
+                        <h3 id="project-3-title">Code Analyzer - Local Compiler</h3>
+                        <p id="project-3-desc">
+                            Frontend for code analysis with local compiler integration, execution output, syntax/semantic error reporting, symbol table, and AST visualization.
+                        </p>
+                        <p class="project-tech"><strong id="project-tech-label-3">Technologies:</strong> HTML, CSS, JavaScript, Jison (Parser)</p>
+                        <div class="project-arrow" aria-hidden="true">→</div>
+                    </div>
+                </a>
+
+                <a href="https://pemtree.netifly.app" target="_blank" rel="noopener noreferrer" class="project-card-link tilt" data-tilt-depth="5" style="--card-accent: #a855f7; --card-accent-soft: rgba(168, 85, 247, 0.18);">
+                    <div class="project-card">
+                        <div class="project-tag" aria-hidden="true">EXTERNAL</div>
+                        <h3 id="project-pemtree-title">PEMTREE</h3>
+                        <p id="project-pemtree-desc">
+                            Interactive graph visualizer for academic course paths and prerequisites. Explore pensum routes, critical paths, and semester planning.
+                        </p>
+                        <p class="project-tech"><strong id="project-tech-label-pemtree">Technologies:</strong> HTML, CSS, JavaScript (Vanilla ES Modules)</p>
+                        <div class="project-arrow" aria-hidden="true">→</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal" data-reveal="up" data-section-theme="action">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 id="contact-title">Contact</h2>
+                <div class="section-line" aria-hidden="true"></div>
+            </div>
+            <div class="contact-info">
+                <p><strong>$</strong> <span class="contact-key">email</span> = <a href="mailto:carlosdelcid222@proton.me">carlosdelcid222@proton.me</a></p>
+                <p><strong>$</strong> <span class="contact-key">phone</span> = <span id="phone-value">+502 4080 9821</span></p>
+                <p><strong>$</strong> <span class="contact-key">linkedin</span> = <a href="https://www.linkedin.com/in/carlos-sebasti%C3%A1n-del-cid-ram%C3%ADrez-5400a3392/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">linkedin.com/in/carlos-del-cid</a></p>
+                <p><strong>$</strong> <span class="contact-key">github</span> = <a href="https://github.com/Carlosdelcid05" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">github.com/Carlosdelcid05</a></p>
+            </div>
+        </section>
+    </main>
+
     <footer>
+        <div class="ascii-divider" aria-hidden="true">
+            ════════════════════════════════════════
+        </div>
         <p id="footer-text">&copy; 2026 Carlos del Cid. All rights reserved.</p>
+        <p class="footer-built">built with <span class="heart">♥</span> &amp; clean code</p>
     </footer>
 
-    <!-- JavaScript Externo -->
+    <button id="back-to-top" type="button" aria-label="Back to top" class="back-to-top">▲</button>
+
     <script src="script.js"></script>
 </body>
 </html>
